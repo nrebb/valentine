@@ -1,0 +1,33 @@
+:root{
+  --pink:#ff5b9a;
+  --pink2:#ff8bb7;
+  --bg:#ffd6e5;
+  --card:#ffffff;
+  --text:#1a1a1a;
+  --muted:#666;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:
+}
+
+  .hidden{ display:none; }
+
+.yay{
+  margin-top: 14px;
+  text-align:center;
+}
+
+.yayTitle{
+  font-size: 34px;
+  margin: 10px 0 14px;
+  font-weight: 900;
+}
+
+.yayImg{
+  width: min(360px, 90%);
+  border-radius: 14px;
+  border: 3px solid rgba(0,0,0,0.08);
+}
