@@ -1,30 +1,48 @@
-<div class="icon" aria-hidden="true">
-  <div class="cat"></div>
-  <div class="heart"></div>
-</div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Will you be my Valentine?</title>
 
-<h1 class="title">
-  <span id="name">tommi</span> will you be my valentine?
-</h1>
+  <!-- THIS is what makes CSS work -->
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-<div id="questionArea">
-  <div class="buttons">
-    <button id="yesBtn" class="btn yes" type="button">Yes</button>
+<body>
+  <main class="wrap">
+    <section class="card">
 
-    <div class="noArea">
-      <button id="noBtn" class="btn no" type="button">No</button>
-    </div>
-  </div>
+      <div class="icon">
+        <div class="cat"></div>
+        <div class="heart"></div>
+      </div>
 
-  <p id="hint" class="hint">"No" seems a bit shy 😈</p>
-</div>
+      <h1 class="title">
+        <span id="name">tommi</span> will you be my valentine?
+      </h1>
 
-<div id="yayArea" class="yay hidden">
-  <h2 class="yayTitle">YAY! 🎉</h2>
-  <img
-    id="yayImg"
-    class="yayImg"
-    src="yay.jpg"
-    alt="Celebration"
-  />
-</div>
+      <div id="questionArea">
+        <div class="buttons">
+          <button id="yesBtn" class="btn yes" type="button">Yes</button>
+
+          <div class="noArea">
+            <button id="noBtn" class="btn no" type="button">No</button>
+          </div>
+        </div>
+
+        <p id="hint" class="hint">"No" seems a bit shy 😈</p>
+      </div>
+
+      <div id="yayArea" class="yay hidden">
+        <h2 class="yayTitle">YAY! 🎉</h2>
+        <img id="yayImg" class="yayImg" src="yay.jpg" alt="Celebration" />
+      </div>
+
+    </section>
+  </main>
+
+  <!-- THIS is what makes buttons work -->
+  <script src="script.js"></script>
+</body>
+</html>
