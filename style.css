@@ -1,33 +1,150 @@
 :root{
-  --pink:#ff5b9a;
-  --pink2:#ff8bb7;
-  --bg:#ffd6e5;
+  --bg1:#ffd6e5;
+  --bg2:#ffeaf2;
   --card:#ffffff;
   --text:#1a1a1a;
-  --muted:#666;
+  --muted:#6b6b6b;
+  --pink:#ff4d8d;
+  --pink2:#ff7fb0;
 }
 
 *{box-sizing:border-box}
 body{
   margin:0;
-  font-family:
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--text);
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: radial-gradient(circle at top, var(--bg2), var(--bg1));
 }
 
-  .hidden{ display:none; }
+.hidden{display:none;}
+
+.wrap{padding:28px; width:100%; display:flex; justify-content:center;}
+
+.card{
+  width:min(520px, 92vw);
+  background:var(--card);
+  border-radius:22px;
+  padding:26px 22px 22px;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.12);
+  text-align:center;
+}
+
+.title{
+  margin:8px 0 18px;
+  font-size:34px;
+  line-height:1.15;
+  font-weight:900;
+}
+
+.buttons{
+  display:flex;
+  gap:16px;
+  justify-content:center;
+  align-items:center;
+  margin:12px 0 10px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  border:0;
+  cursor:pointer;
+  padding:14px 30px;
+  border-radius:16px;
+  font-size:18px;
+  font-weight:800;
+  transition: transform .12s ease;
+}
+
+.btn:active{ transform: scale(0.98); }
+
+.yes{
+  background:linear-gradient(135deg, var(--pink), var(--pink2));
+  color:white;
+  box-shadow: 0 10px 22px rgba(255,77,141,0.35);
+}
+
+.no{
+  background:#f2f2f2;
+  color:#333;
+}
+
+.hint{
+  color:var(--muted);
+  margin:10px 0 0;
+  font-size:14px;
+}
+
+.noArea{
+  display:inline-block;
+  transition: transform .12s ease;
+}
 
 .yay{
-  margin-top: 14px;
+  margin-top:14px;
   text-align:center;
 }
 
 .yayTitle{
-  font-size: 34px;
-  margin: 10px 0 14px;
-  font-weight: 900;
+  font-size:34px;
+  margin:10px 0 14px;
+  font-weight:900;
 }
 
 .yayImg{
   width: min(360px, 90%);
-  border-radius: 14px;
+  border-radius: 16px;
   border: 3px solid rgba(0,0,0,0.08);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
 }
+
+/* simple cute icon */
+.icon{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  margin-top:2px;
+}
+
+.cat{
+  width:70px;
+  height:60px;
+  background:#f6b26b;
+  border-radius:50px;
+  position:relative;
+}
+.cat:before, .cat:after{
+  content:"";
+  position:absolute;
+  top:-10px;
+  width:18px;
+  height:18px;
+  background:#f6b26b;
+  border-radius:4px 4px 18px 18px;
+}
+.cat:before{ left:8px; transform:rotate(-12deg); }
+.cat:after{ right:8px; transform:rotate(12deg); }
+.cat i{ display:none; }
+
+.heart{
+  width:18px;
+  height:18px;
+  background:var(--pink);
+  transform: rotate(45deg);
+  border-radius:4px;
+  position:relative;
+  margin-left:-6px;
+}
+.heart:before,.heart:after{
+  content:"";
+  position:absolute;
+  width:18px;height:18px;
+  background:var(--pink);
+  border-radius:50%;
+}
+.heart:before{ left:-9px; top:0; }
+.heart:after{ top:-9px; left:0; }
